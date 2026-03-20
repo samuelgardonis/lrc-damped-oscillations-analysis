@@ -50,7 +50,7 @@ where $\omega_0$ is the natural angular frequency of the circuit.
 - Function generator (square wave input)
 - Digital Storage Oscilloscope (DSO)
 
-The circuit was configured in a series arrangement, and the voltage across the capacitor was monitored using the oscilloscope.
+The circuit was configured in series, and the voltage across the capacitor was monitored using an oscilloscope.
 
 ---
 
@@ -81,7 +81,7 @@ The circuit was configured in a series arrangement, and the voltage across the c
 ## Graph Analysis
 
 ![Damping vs Resistance](plots/graph.png)
-The linear variation of damping constant (α) with resistance (R) confirms the theoretical model:
+The linear variation of the damping constant (α) with resistance (R) confirms the theoretical model:
 
 $$\alpha = \frac{1}{2L}R_{ext} + \frac{R_L}{2L}$$
 
@@ -121,16 +121,16 @@ These values are consistent with expected non-ideal characteristics of practical
 
 ## Discussion
 
-The observed linear dependence of damping constant on resistance validates the theoretical model of an LRC system. The non-zero intercept indicates the presence of parasitic resistance inherent to the inductor, which becomes significant at low external resistance values.
+The observed linear dependence of the damping constant on resistance validates the theoretical model of an LRC system. The nonzero intercept indicates the presence of parasitic inductor resistance, which becomes significant at low external resistance values.
 
-Deviations from ideal behavior may be attributed to non-ideal components, including dielectric losses in the capacitor and frequency-dependent resistance in the inductor.
+Deviations from ideal behaviour may be attributed to non-ideal components, including dielectric losses in the capacitor and frequency-dependent resistance in the inductor.
 
 The consistency between experimental data and theoretical prediction supports the validity of the adopted measurement and analysis techniques.
 
 ## Error Analysis
 
 - Capacitor tolerance (±10%)  
-- Skin effect in inductor  
+- Skin effect in an inductor  
 - Oscilloscope measurement uncertainty (~1–2%)  
 
 ---
@@ -144,3 +144,8 @@ The consistency between experimental data and theoretical prediction supports th
 
 Samuel Gardonis  
 B.Sc. Physics, St. Xavier’s College, Mumbai
+## Author
+
+Samuel Gardonis  
+B.Sc. Physics, St. Xavier's College, Mumbai  
+[📄 View Full Lab Report](/Samuel_Gardonis_LRC_Analysis.pdf)
