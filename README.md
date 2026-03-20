@@ -15,25 +15,31 @@ In the presence of resistance, energy dissipates via Joule heating, leading to d
 
 The governing differential equation:
 
-\frac{d^2 q}{dt^2} + \frac{R}{L}\frac{dq}{dt} + \frac{q}{LC} = 0
+$$\frac{d^2q}{dt^2} + \frac{R}{L}\frac{dq}{dt} + \frac{q}{LC} = 0$$
+
+This represents a second-order linear differential equation analogous to a damped harmonic oscillator in mechanical systems.
 
 For an underdamped system:
 
-α = R / 2L
+$$\frac{R}{2L} < \frac{1}{\sqrt{LC}}$$
 
 Logarithmic decrement:
 
-δ = ln(A₁ / A₂)
+$$\delta = \ln\left(\frac{A_1}{A_2}\right)$$
+
+Damping constant from measurement:
+
+$$\alpha = \frac{\delta}{T}$$
 
 Damping constant:
 
-α = δ / T
+$$\alpha = \frac{R_{ext} + R_L}{2L}$$
 
 The quality factor (Q) is defined as:
 
-Q = \frac{\omega_0}{2\alpha}
+$$Q = \frac{\omega_0}{2\alpha} \approx \frac{\pi}{\delta}$$
 
-where \omega_0 is the natural angular frequency of the circuit.
+where $\omega_0$ is the natural angular frequency of the circuit.
 ---
 
 ## Experimental Setup
@@ -44,7 +50,7 @@ where \omega_0 is the natural angular frequency of the circuit.
 - Function generator (square wave input)
 - Digital Storage Oscilloscope (DSO)
 
-The voltage across the capacitor was monitored to observe oscillations.
+The circuit was configured in a series arrangement, and the voltage across the capacitor was monitored using the oscilloscope.
 
 ---
 
@@ -75,22 +81,23 @@ The voltage across the capacitor was monitored to observe oscillations.
 ## Graph Analysis
 
 ![Damping vs Resistance](plots/graph.png)
-A plot of damping constant (α) vs resistance (R) shows a linear relationship:
+The linear variation of damping constant (α) with resistance (R) confirms the theoretical model:
 
-α = (R_ext + R_L) / (2L)
+$$\alpha = \frac{1}{2L}R_{ext} + \frac{R_L}{2L}$$
 
-Slope (m): 6.46 × 10⁻³  
-Intercept (c): 548.2  
-
+- Slope $(m)$: $6.46 \times 10^{-3} \ \text{s}^{-1}\Omega^{-1}$  
+- Intercept $(c)$: $548.2 \ \text{s}^{-1}$
 ---
 
 ## Results
 
 Inductance:
-L ≈ 77.4 mH  
+
+$$L = \frac{1}{2m} = 77.4 \ \text{mH}$$
 
 Parasitic Resistance:
-R_L ≈ 84.9 Ω  
+
+$$R_L = \frac{c}{m} = 84.9 \ \Omega$$
 
 These values are consistent with expected non-ideal characteristics of practical inductors.
 
@@ -117,6 +124,8 @@ These values are consistent with expected non-ideal characteristics of practical
 The observed linear dependence of damping constant on resistance validates the theoretical model of an LRC system. The non-zero intercept indicates the presence of parasitic resistance inherent to the inductor, which becomes significant at low external resistance values.
 
 Deviations from ideal behavior may be attributed to non-ideal components, including dielectric losses in the capacitor and frequency-dependent resistance in the inductor.
+
+The consistency between experimental data and theoretical prediction supports the validity of the adopted measurement and analysis techniques.
 
 ## Error Analysis
 
