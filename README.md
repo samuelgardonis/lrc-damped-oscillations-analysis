@@ -1,5 +1,5 @@
-# Analytical Characterisation of Damped Oscillations and Parasitic Resistance in a Series LRC Circuit
-
+# Analytical Study of Damping and Parasitic Resistance in a Series LRC Circuit
+A quantitative experimental study of transient response in electrical oscillatory systems
 ## Objective
 To investigate the transient response of a series L–R–C circuit and determine the damping constant as a function of resistance, along with estimating the inductance and parasitic resistance of the inductor.
 
@@ -7,7 +7,7 @@ To investigate the transient response of a series L–R–C circuit and determin
 
 ## Background & Theory
 
-A series L–R–C circuit exhibits oscillatory behavior analogous to a damped mechanical oscillator. Energy alternates between:
+A series L–R–C circuit exhibits oscillatory behaviour analogous to a damped mechanical oscillator. Energy alternates between:
 - Electric field (capacitor)
 - Magnetic field (inductor)
 
@@ -15,7 +15,7 @@ In the presence of resistance, energy dissipates via Joule heating, leading to d
 
 The governing differential equation:
 
-d²q/dt² + (R/L)(dq/dt) + q/LC = 0
+\frac{d^2 q}{dt^2} + \frac{R}{L}\frac{dq}{dt} + \frac{q}{LC} = 0
 
 For an underdamped system:
 
@@ -29,6 +29,11 @@ Damping constant:
 
 α = δ / T
 
+The quality factor (Q) is defined as:
+
+Q = \frac{\omega_0}{2\alpha}
+
+where \omega_0 is the natural angular frequency of the circuit.
 ---
 
 ## Experimental Setup
@@ -69,6 +74,7 @@ The voltage across the capacitor was monitored to observe oscillations.
 
 ## Graph Analysis
 
+![Damping vs Resistance](plots/graph.png)
 A plot of damping constant (α) vs resistance (R) shows a linear relationship:
 
 α = (R_ext + R_L) / (2L)
@@ -85,6 +91,8 @@ L ≈ 77.4 mH
 
 Parasitic Resistance:
 R_L ≈ 84.9 Ω  
+
+These values are consistent with expected non-ideal characteristics of practical inductors.
 
 ---
 
@@ -104,6 +112,12 @@ R_L ≈ 84.9 Ω
 
 ---
 
+## Discussion
+
+The observed linear dependence of damping constant on resistance validates the theoretical model of an LRC system. The non-zero intercept indicates the presence of parasitic resistance inherent to the inductor, which becomes significant at low external resistance values.
+
+Deviations from ideal behavior may be attributed to non-ideal components, including dielectric losses in the capacitor and frequency-dependent resistance in the inductor.
+
 ## Error Analysis
 
 - Capacitor tolerance (±10%)  
@@ -111,6 +125,11 @@ R_L ≈ 84.9 Ω
 - Oscilloscope measurement uncertainty (~1–2%)  
 
 ---
+
+## References
+
+1. Sears and Zemansky, *University Physics with Modern Physics*, 15th Edition – Chapter 31 (Alternating Current) and Section 14.7 (Damped Oscillations)  
+2. H.D. Young and R.A. Freedman – Standard LCR circuit analysis and damping theory  
 
 ## Author
 
